@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example of VAULT SYLLABI API Use</title>
+</head>
+<body>
+<div id="vault"><ul></ul></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$.ajax({
+    data: {
+        // ask for a specific semester
+        // format is "(Fall|Spring|Summer) YYYY"
+        semester: 'Fall 2015',
+        order: 'modified'
+    },
+    dataType: 'json',
+    // URL of hosted demo, set to localhost for local development
+    url: 'http://libraries.cca.edu/syllabi-api/',
+    // get results & append a list item for each one
+    success: function (data, status, xhr) {
+        $.each(data.results, function (index, item) {
+            var html = '<li><a href="' + item.link + '">' + item.name + '</a>'
+            // if we have a thumbnail, slap it in there too
+            var files = item.attachments
+            if (files[0] && files[0].links && files[0].links.thumbnail) {
+                html += '<img src="' + files[0].links.thumbnail + '">'
+            }
+            $('#vault ul').append(html)
+        })
+    }
+})
+</script>
+</body>
+</html>

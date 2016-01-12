@@ -1,0 +1,33 @@
+{
+    "vault_api_url": "https://vault.cca.edu/api/search?info=metadata%2Cbasic%2Cattachment&collections=9ec74523-e018-4e01-ab4e-be4dd06cdd68&where=%2Fxml%2Flocal%2FcourseInfo%2Fsemester%20%3D%20%27Spring%202015%27%20AND%20%2Fxml%2Flocal%2FcourseInfo%2Fsection%20%3D%20%27WRLIT-100-01%27",
+    "results": [
+        {
+            "name": "Spring 2015 | WRLIT-100 | Writing 1: Language Dynamics",
+            "link": "https://vault.cca.edu/items/d15b3d2a-3037-4f70-96ce-62f6619449dc/1/",
+            "attachments": [
+                {
+                    "type": "file",
+                    "uuid": "21376771-0ab3-4db5-961e-2a3bf0a8a7f4",
+                    "description": "Mitsanas Syllabus Spring 2015 Wtg 1.docx",
+                    "viewer": "",
+                    "preview": false,
+                    "restricted": false,
+                    "filename": "Spring 2015 Wtg 1.docx",
+                    "size": 136367,
+                    "conversion": false,
+                    "links": {
+                        "view": "https://vault.cca.edu/items/d15b3d2a-3037-4f70-96ce-62f6619449dc/1/?attachment.uuid=21376771-0ab3-4db5-961e-2a3bf0a8a7f4",
+                        "thumbnail": "https://vault.cca.edu/thumbs/d15b3d2a-3037-4f70-96ce-62f6619449dc/1/21376771-0ab3-4db5-961e-2a3bf0a8a7f4"
+                    }
+                }
+            ],
+            "semester": "Spring 2015",
+            "department": "WRLIT",
+            "course": "Writing 1: Language Dynamics",
+            "faculty": "Eugenia Mitsanas",
+            "section": "WRLIT-100-01",
+            "courseName": "WRLIT-100",
+            "facultyID": "emitsanas"
+        }
+    ]
+}
