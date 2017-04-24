@@ -9,16 +9,20 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
+// URL.searchParams is fairly new browser feature
+var params = new URL(document.location).searchParams
+
 $.ajax({
     data: {
         // ask for a specific semester
         // format is "(Fall|Spring|Summer) YYYY"
-        semester: 'Fall 2015',
-        order: 'modified'
+        semester: params.get('semester') || 'Fall 2015',
+        order: params.get('order') || 'modified',
+        q: params.get('q') || '',
     },
     dataType: 'json',
     // URL of hosted demo, set to localhost for local development
-    url: 'http://libraries.cca.edu/syllabi-api/',
+    url: 'https://libraries.cca.edu/syllabi-api/',
     // get results & append a list item for each one
     success: function (data, status, xhr) {
         $.each(data.results, function (index, item) {
