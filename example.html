@@ -5,7 +5,17 @@
     <title>Example of VAULT SYLLABI API Use</title>
 </head>
 <body>
-<div id="vault"><ul></ul></div>
+
+    <h1>VAULT Syllabi API Example</h1>
+    <p>You can add query string parameters to the URL to filter the syllabi that are displayed in the list below. The options are:</p>
+    <ul>
+        <li><code>semester</code> e.g. "Spring 2017"</li>
+        <li><code>order</code> which is one of "modified", "relevance", or "name"</li>
+        <li><code>q</code> for a free text query</li>
+    </ul>
+    <p>So, for instance, appending <a href="#" onclick="location = location.pathname + '?semester=Spring+2017&q=history+of+art'">?semester=Spring+2017&q=history+of+art</a> to this URL will retrieve Spring 2017 syllabi matching the search "history of art".</p>
+
+    <div id="vault"><ul></ul></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
